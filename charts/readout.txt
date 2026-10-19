@@ -1,0 +1,21 @@
+GEO LIFT READOUT (synthetic data)
+Test markets: M03, M07, M11, M14, M18  |  Control markets: 15
+Simulated true lift during flight: ~12% (after a 2-week ramp)
+
+Method                      Lift    Incremental visits   Pre-period MAPE
+Scaled control (DiD)       12.8%                17,276              3.7%
+Synthetic control          12.3%                16,690              3.1%
+
+Placebo test: 400 fake tests on control markets; 95th percentile of placebo lift = 2.9%; p = 0.000
+Carryover (6 weeks after flight): 4.1% lift, 4,136 extra visits
+
+Synthetic control weights: M08 33%, M01 16%, M19 11%, M04 9%, M06 7%, M15 6%
+
+Power with this design (5 test markets, 8-week flight):
+  true lift   1%  ->  detected   16% of the time
+  true lift   2%  ->  detected   38% of the time
+  true lift   3%  ->  detected   46% of the time
+  true lift   4%  ->  detected   67% of the time
+  true lift   6%  ->  detected   89% of the time
+  true lift   8%  ->  detected   99% of the time
+  true lift  10%  ->  detected  100% of the time
